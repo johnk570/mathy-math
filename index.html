@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mathy-math</title>
+  <script src="processing.min.js"></script>
+  
+
+</head>
+<body>
+
+  <p style="text-align: center;"><span style="font-size:24px;"><span style="font-family:courier new,courier,monospace;"><span style="color:#FF0000;">mathy-math</span></span></span></p>
+
+  <canvas id="canvas"></canvas>
+  <script>
+    var canvas = document.getElementById("canvas");
+    var processing = new Processing(canvas, function(processing) {
+        processing.size(1250, 500);
+        processing.background(0xFFF);
+
+        var mouseIsPressed = false;
+        processing.mousePressed = function () { mouseIsPressed = true; };
+        processing.mouseReleased = function () { mouseIsPressed = false; };
+
+        var keyIsPressed = false;
+        processing.keyPressed = function () { keyIsPressed = true; };
+        processing.keyReleased = function () { keyIsPressed = false; };
+
+        function getImage(s) {
+            var url = "https://www.kasandbox.org/programming-images/" + s + ".png";
+            processing.externals.sketch.imageCache.add(url);
+            return processing.loadImage(url);
+        }
+
+        // use degrees rather than radians in rotate function
+        var rotateFn = processing.rotate;
+        processing.rotate = function (angle) {
+            rotateFn(processing.radians(angle));
+        };
+
+        with (processing) {
+// program starts here -------------------------------------------------------------------------------------------------------
+  
+var x = 1;
+var y = 600;
+var a = 1;
+var b = 1;
+var mouthSize1 = 1; 
+var mouthSize2 = 100; 
+var bgColor = 1;  
+          
+draw = function() {    
+    // all lines of code inside here will be run repeatedly
+
+var position = 335;
+textSize(16);
+fill(0, 0, 0);
+text("._q0p_.", 825, position);
+
+  
+textSize(16);
+fill(0, 0, 0);
+text("mathy-math", mouseX, mouseY);
+
+
+  
+};
+          
+// program ends here -------------------------------------------------------------------------------------------------------
+        }
+        if (typeof draw !== 'undefined') processing.draw = draw;
+    });
+  </script>
+    
+    
+    
+
+</body>
+</html>
+
