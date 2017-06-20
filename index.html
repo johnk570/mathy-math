@@ -43,23 +43,21 @@
 // program starts here -------------------------------------------------------------------------------------------------------
   
 var x = 1; 
-var position = 100;          
+var position = 100;  
+          
+function doSomething() {
+   textSize(16);
+    fill(0, 0, 0);
+    text(x, 200, position); 
+    x = x + 1;
+    position = position + 15; 
+}            
           
 draw = function() {
     
     // all lines of code inside here will be run repeatedly 
 
 setTimeout(doSomething, 3000);
-
-function doSomething() {
-   textSize(16);
-    fill(0, 0, 0);
-    text(x, 200, position); 
-    x = x + 1;
-    position = position + 15;
-  
-}  
-  
  
 };
           
