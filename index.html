@@ -47,10 +47,15 @@ var x = 1;
 draw = function() {
     
     // all lines of code inside here will be run repeatedly 
+  
+var position = 100;
+textSize(16);
+fill(0, 0, 0);
 
-  setTimeout(function(){ alert(x); }, 1000);
+  setTimeout(function(){ text(x, 200, position); }, 1000);
 
 x = x + 1;
+position = position + 15;
   
 };
           
