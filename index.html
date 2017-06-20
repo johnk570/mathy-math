@@ -42,24 +42,15 @@
         with (processing) {
 // program starts here -------------------------------------------------------------------------------------------------------
   
-var x = 1;
-var y = 600;
-var a = 1;
-var b = 1;
-var mouthSize1 = 1; 
-var mouthSize2 = 100; 
-var bgColor = 1;  
-var position = 335;          
+var x = 1;        
           
 draw = function() {
     
     // all lines of code inside here will be run repeatedly 
 
-textSize(16);
-fill(0, 0, 0);
-text("1", 50, y);
+  setTimeout(function(){ alert(x); }, 1000);
 
-y = y + 1;
+x = x + 1;
   
 };
           
